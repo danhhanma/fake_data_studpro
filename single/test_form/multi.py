@@ -108,8 +108,8 @@ def gui_form(index):
             "entry.1732692189": gio_hoc,
             "entry.1628223057": kho_khan,
             "entry.2054599017": ly_do_chon,
-            "entry.1701307417": "rồi",
-            "entry.196439037": "rồi",
+            "entry.1701307417": "chưa" if random.random() < 0.7 else "rồi",
+            "entry.196439037": "rồi" if random.random() < 0.7 else "chưa",
             "entry.507281624": loai_dv,
             "entry.2020520532": nhuoc_diem
         }
