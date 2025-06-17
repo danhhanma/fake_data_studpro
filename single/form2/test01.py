@@ -41,8 +41,8 @@ def chon_khong_thich():
     else:
         return random.sample(khong_thich_all, k=random.randint(1, 3))
 
-# ==== Hàm gửi 1 request ====
-def send_request():
+# ==== Gửi request đơn ====
+def send_request(i):
     payload = {
         "entry.1524771023": str(random.randint(4, 5)),
         "entry.1594930872": random.choice(momuon_list),
@@ -67,32 +67,37 @@ def send_request():
                 result[key] = value
         return result
 
-    response = requests.post(url, data=flatten(payload), headers=headers)
-    if response.ok:
-        print("✅ Thành công")
-    else:
-        print("❌ Lỗi:", response.status_code)
+    try:
+        response = requests.post(url, data=flatten(payload), headers=headers)
+        if response.ok:
+            print(f"✅ Thành công [{i}]")
+        else:
+            print(f"❌ Lỗi [{i}]: {response.status_code}")
+    except Exception as e:
+        print(f"❌ Ngoại lệ [{i}]: {e}")
 
-# ==== Hàm chạy trong từng luồng ====
-def worker(n):
-    for _ in range(n):
-        send_request()
+# ==== Hàm chạy luồng ====
+def worker(start_idx, count):
+    for i in range(start_idx, start_idx + count):
+        send_request(i)
 
-# ==== Nhập từ bàn phím ====
+# ==== Người dùng nhập ====
 total_requests = int(input("Nhập tổng số lần gửi: "))
 num_threads = int(input("Nhập số luồng: "))
 
 requests_per_thread = total_requests // num_threads
 threads = []
 
+# Khởi tạo các luồng chính
 for i in range(num_threads):
-    t = threading.Thread(target=worker, args=(requests_per_thread,))
+    start_index = i * requests_per_thread
+    t = threading.Thread(target=worker, args=(start_index, requests_per_thread))
     threads.append(t)
     t.start()
 
-# Nếu tổng không chia hết, gửi phần còn lại
-for _ in range(total_requests % num_threads):
-    send_request()
+# Phần dư nếu không chia hết
+for i in range(total_requests % num_threads):
+    send_request(num_threads * requests_per_thread + i)
 
 # Đợi tất cả luồng kết thúc
 for t in threads:
