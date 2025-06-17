@@ -3,7 +3,7 @@ import random
 import threading
 
 # === Đọc dữ liệu từ file ===
-with open("mongmuon.txt", "r", encoding="utf-8") as f:
+with open("../data/mongmuon.txt", "r", encoding="utf-8") as f:
     momuon_list = [line.strip() for line in f if line.strip()]
 
 # ==== Dữ liệu mẫu ====
