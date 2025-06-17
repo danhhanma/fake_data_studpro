@@ -7,18 +7,18 @@ def weighted_choice(options):
     return random.choices(values, weights=weights, k=1)[0]
 
 # === Đọc dữ liệu từ file ===
-with open("data/truong.txt", "r", encoding="utf-8") as f:
+with open("../data/truong.txt", "r", encoding="utf-8") as f:
     truong_list = [line.strip() for line in f if line.strip()]
 
-with open("data/lydo.txt", "r", encoding="utf-8") as f:
+with open("../data/ly_do.txt", "r", encoding="utf-8") as f:
     ly_do_list = [line.strip() for line in f if line.strip()]
 
-# === Trọng số trường học ===
+# Trọng số trường học
 target_truong = "Đại học Công nghệ thông tin và Truyền thông Việt Hàn"
 truong_weighted = [(truong, 50 if truong == target_truong else 1) for truong in truong_list]
 truong_duoc_chon = weighted_choice(truong_weighted)
 
-# === Trọng số ngành học ===
+# Ngành học
 nganh_chon = weighted_choice([
     ("Công nghệ thông tin", 50),
     ("Kinh tế", 20),
@@ -26,45 +26,76 @@ nganh_chon = weighted_choice([
     ("Khoa học xã hội", 10)
 ])
 
-# === Giờ học trung bình ===
+# Giờ học
 gio_hoc = weighted_choice([
     ("Dưới 1 giờ", 20),
     ("2 - 3 giờ", 60),
     ("Trên 4 giờ", 20)
 ])
 
-# === Khó khăn học tập (chọn 2) ===
-kho_khan = random.sample([
-    "Không hiểu bài giảng trên lớp",
-    "Thiếu tài liệu tham khảo",
-    "Khó khăn trong việc quản lý thời gian",
-    "Không có ai hỗ trợ, giải đáp thắc mắc"
-], k=2)
+# --- Khó khăn học tập ---
+def chon_kho_khan():
+    roll = random.random()
+    if roll < 0.7:
+        # 70% ưu tiên "Không hiểu bài", + 1 trong 2
+        phu = random.choice([
+            "Thiếu tài liệu tham khảo",
+            "Không có ai hỗ trợ, giải đáp thắc mắc"
+        ])
+        return ["Không hiểu bài giảng trên lớp", phu]
+    else:
+        # 30% chọn ngẫu nhiên 2 lý do bất kỳ
+        return random.sample([
+            "Không hiểu bài giảng trên lớp",
+            "Thiếu tài liệu tham khảo",
+            "Khó khăn trong việc quản lý thời gian",
+            "Không có ai hỗ trợ, giải đáp thắc mắc"
+        ], 2)
 
-# === Dịch vụ hỗ trợ (chọn 1–3) ===
-loai_dv = random.sample([
-    "Gia sư trực tiếp",
-    "Gia sư trực tuyến (Zoom, Google Meet, v.v.)",
-    "Các nền tảng hỗ trợ học tập (VD: Gauth,QANDA,...)",
-    "Dịch vụ hỗ trợ làm bài tập thuê"
-], k=random.randint(1, 3))
+kho_khan = chon_kho_khan()
 
-# === Nhược điểm của dịch vụ (chọn 1–3) ===
-nhuoc_diem = random.sample([
-    "Chi phí cao",
-    "Chất lượng không ổn định",
-    "Thời gian phản hồi chậm",
-    "Không đúng nội dung yêu cầu",
-    "Thiếu minh bạch về nguồn tài liệu"
-], k=random.randint(1, 3))
+# Loại dịch vụ hỗ trợ
+def chon_loai_dv():
+    roll = random.random()
+    if roll < 0.7:
+        return [
+            "Các nền tảng hỗ trợ học tập (VD: Gauth,QANDA,...)",
+            "Dịch vụ hỗ trợ làm bài tập thuê"
+        ]
+    else:
+        all_dv = [
+            "Gia sư trực tiếp",
+            "Gia sư trực tuyến (Zoom, Google Meet, v.v.)",
+            "Các nền tảng hỗ trợ học tập (VD: Gauth,QANDA,...)",
+            "Dịch vụ hỗ trợ làm bài tập thuê"
+        ]
+        return random.sample(all_dv, k=random.randint(1, 3))
 
-# === Lý do cá nhân (1 dòng từ file) ===
+loai_dv = chon_loai_dv()
+
+# Nhược điểm dịch vụ
+def chon_nhuoc_diem():
+    roll = random.random()
+    all_options = [
+        "Chi phí cao",
+        "Chất lượng không ổn định",
+        "Thời gian phản hồi chậm",
+        "Không đúng nội dung yêu cầu",
+        "Thiếu minh bạch về nguồn tài liệu"
+    ]
+    if roll < 0.7:
+        return ["Chi phí cao", "Chất lượng không ổn định"]
+    else:
+        return random.sample(all_options, k=random.randint(1, 4))
+
+nhuoc_diem = chon_nhuoc_diem()
+
+# Lý do tự do
 ly_do_chon = random.choice(ly_do_list)
 
-# === Google Form URL ===
+# Gửi form
 url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfQbEigp7UPTQoiR5b_tSCeJVeo6tFojgNseV8UJTEA0S0riw/formResponse"
 
-# === Payload gửi đi ===
 payload = {
     "entry.366340186": truong_duoc_chon,
     "entry.1283381215": nganh_chon,
@@ -77,18 +108,16 @@ payload = {
     "entry.2020520532": nhuoc_diem
 }
 
-# === Hàm flatten để xử lý list (checkbox) ===
 def flatten(data):
     result = {}
-    for k, v in data.items():
-        if isinstance(v, list):
-            for item in v:
-                result.setdefault(k, []).append(item)
+    for key, value in data.items():
+        if isinstance(value, list):
+            for v in value:
+                result.setdefault(key, []).append(v)
         else:
-            result[k] = v
+            result[key] = value
     return result
 
-# === Gửi request ===
 headers = {
     "Content-Type": "application/x-www-form-urlencoded",
     "User-Agent": "Mozilla/5.0"
@@ -96,7 +125,6 @@ headers = {
 
 response = requests.post(url, data=flatten(payload), headers=headers)
 
-# === Phản hồi ===
 if response.ok:
     print("✅ Gửi thành công:", truong_duoc_chon)
 else:
