@@ -79,7 +79,7 @@ def flatten(data):
 def gui_form(index):
     try:
         target_truong = "Đại học Công nghệ thông tin và Truyền thông Việt Hàn"
-        truong_weighted = [(truong, 50 if truong == target_truong else 1) for truong in truong_list]
+        truong_weighted = [(truong, 5 if truong == target_truong else 10) for truong in truong_list]
         truong_duoc_chon = weighted_choice(truong_weighted)
 
         nganh_chon = weighted_choice([

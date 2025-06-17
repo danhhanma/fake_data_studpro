@@ -1,0 +1,100 @@
+Tôi mong muốn có thêm chức năng luyện nói với AI.
+Mong có thêm bài kiểm tra định kỳ để đánh giá trình độ.
+Mong nhận được tài liệu học phù hợp với trình độ cá nhân.
+Tôi muốn có thêm video hướng dẫn ngữ pháp rõ ràng hơn.
+Mong có thêm hỗ trợ trực tuyến từ giáo viên.
+Muốn có chức năng nhắc học mỗi ngày qua Zalo.
+Tôi muốn có phòng học trực tuyến để học nhóm.
+Mong muốn nhận được lộ trình học rõ ràng từng giai đoạn.
+Tôi cần chức năng ghi chú và đánh dấu từ vựng quan trọng.
+Muốn có thêm trò chơi học từ vựng để bớt nhàm chán.
+Tôi muốn có mục tiêu học cụ thể mỗi tuần.
+Muốn có thêm phần luyện viết và được sửa bài.
+Mong nhận được mẹo làm bài thi hiệu quả hơn.
+Tôi muốn có phần thống kê quá trình học tập theo ngày.
+Muốn học qua ứng dụng điện thoại tiện lợi hơn.
+Mong có tính năng học cùng bạn bè để tạo động lực.
+Tôi muốn có thêm đề thi thử sát với thực tế.
+Muốn có thêm các chủ đề hội thoại đời sống.
+Tôi cần phần gợi ý học theo thời gian biểu cá nhân.
+Muốn có video học kèm phụ đề song ngữ.
+Tôi mong muốn có phần luyện nghe tốc độ chậm.
+Mong có giáo trình cá nhân hóa theo điểm mạnh yếu.
+Tôi cần chức năng ôn tập từ vựng đã học.
+Mong có kênh tư vấn định hướng học ngoại ngữ.
+Muốn có phần hỏi đáp giữa học viên và chuyên gia.
+Tôi muốn có chức năng chấm điểm bài tập tự động.
+Mong nhận được chứng chỉ hoàn thành từng khóa học.
+Tôi mong muốn có các bài học ngắn gọn dễ hiểu hơn.
+Muốn có thêm khóa học theo từng kỹ năng riêng biệt.
+Mong có lịch học linh hoạt hơn cho người bận rộn.
+Tôi cần thêm chức năng lưu lại tiến độ học.
+Muốn có thông báo cập nhật nội dung học mới.
+Mong có chức năng đánh giá giọng đọc khi luyện nói.
+Tôi muốn có hướng dẫn học cho người mất gốc.
+Mong có tính năng luyện thi chuẩn quốc tế.
+Tôi cần có phần ghi âm bài nói để tự nghe lại.
+Muốn có bảng từ vựng riêng cho từng bài học.
+Tôi muốn phần mềm ghi nhớ từ bằng hình ảnh.
+Mong có phần chia sẻ bí quyết học từ học viên giỏi.
+Muốn có mục tiêu thưởng để tăng động lực học.
+Tôi cần các mẫu câu giao tiếp ứng dụng thực tế.
+Muốn học kết hợp giữa tiếng Việt và tiếng Anh.
+Tôi mong có phần giải thích chi tiết đáp án sai.
+Muốn có bài test đầu vào xác định trình độ.
+Tôi cần bài học phân loại theo chủ đề cuộc sống.
+Muốn có phần tổng hợp lỗi sai phổ biến.
+Mong có người kèm 1:1 cho những phần khó.
+Tôi cần tài liệu học offline khi không có mạng.
+Muốn có chức năng học qua tình huống mô phỏng.
+Tôi muốn học theo lộ trình từ cơ bản đến nâng cao.
+Mong có chức năng luyện tập theo phong cách gamification.
+Mong có thêm bài kiểm tra định kỳ để đánh giá trình độ. 
+Mong nhận được tài liệu học phù hợp với trình độ cá nhân. 
+Tôi muốn có thêm video hướng dẫn ngữ pháp rõ ràng hơn. 
+Mong có thêm hỗ trợ trực tuyến từ giáo viên. 
+Muốn có chức năng nhắc học mỗi ngày qua Zalo. 
+Tôi muốn có phòng học trực tuyến để học nhóm. 
+Mong muốn nhận được lộ trình học rõ ràng từng giai đoạn. 
+Tôi cần chức năng ghi chú và đánh dấu từ vựng quan trọng. 
+Muốn có thêm trò chơi học từ vựng để bớt nhàm chán. 
+Tôi muốn có mục tiêu học cụ thể mỗi tuần. 
+Muốn có thêm phần luyện viết và được sửa bài. 
+Mong nhận được mẹo làm bài thi hiệu quả hơn. 
+Tôi muốn có phần thống kê quá trình học tập theo ngày. 
+Muốn học qua ứng dụng điện thoại tiện lợi hơn. 
+Mong có tính năng học cùng bạn bè để tạo động lực. 
+Tôi muốn có thêm đề thi thử sát với thực tế. 
+Muốn có thêm các chủ đề hội thoại đời sống. 
+Tôi cần phần gợi ý học theo thời gian biểu cá nhân. 
+Muốn có video học kèm phụ đề song ngữ. 
+Tôi mong muốn có phần luyện nghe tốc độ chậm. 
+Mong có giáo trình cá nhân hóa theo điểm mạnh yếu. 
+Tôi cần chức năng ôn tập từ vựng đã học. 
+Mong có kênh tư vấn định hướng học ngoại ngữ. 
+Muốn có phần hỏi đáp giữa học viên và chuyên gia. 
+Tôi muốn có chức năng chấm điểm bài tập tự động. 
+Mong nhận được chứng chỉ hoàn thành từng khóa học. 
+Tôi mong muốn có các bài học ngắn gọn dễ hiểu hơn. 
+Muốn có thêm khóa học theo từng kỹ năng riêng biệt. 
+Mong có lịch học linh hoạt hơn cho người bận rộn. 
+Tôi cần thêm chức năng lưu lại tiến độ học. 
+Muốn có thông báo cập nhật nội dung học mới. 
+Mong có chức năng đánh giá giọng đọc khi luyện nói. 
+Tôi muốn có hướng dẫn học cho người mất gốc. 
+Mong có tính năng luyện thi chuẩn quốc tế. 
+Tôi cần có phần ghi âm bài nói để tự nghe lại. 
+Muốn có bảng từ vựng riêng cho từng bài học. 
+Tôi muốn phần mềm ghi nhớ từ bằng hình ảnh. 
+Mong có phần chia sẻ bí quyết học từ học viên giỏi. 
+Muốn có mục tiêu thưởng để tăng động lực học. 
+Tôi cần các mẫu câu giao tiếp ứng dụng thực tế. 
+Muốn học kết hợp giữa tiếng Việt và tiếng Anh. 
+Tôi mong có phần giải thích chi tiết đáp án sai. 
+Muốn có bài test đầu vào xác định trình độ. 
+Tôi cần bài học phân loại theo chủ đề cuộc sống. 
+Muốn có phần tổng hợp lỗi sai phổ biến. 
+Mong có người kèm 1:1 cho những phần khó. 
+Tôi cần tài liệu học offline khi không có mạng. 
+Muốn có chức năng học qua tình huống mô phỏng. 
+Tôi muốn học theo lộ trình từ cơ bản đến nâng cao. 
