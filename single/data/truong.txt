@@ -1,12 +1,9 @@
-CNTT:
 Đại học Công nghệ - ĐHQG Hà Nội
 Đại học Công nghệ Thông tin - ĐHQG TP. HCM
 Đại học Công nghệ thông tin và Truyền thông Việt Hàn
 Đại học FPT
 Đại học Bách khoa - Đại học Đà Nẵng
 Đại học Hoa Sen
-
-Kinh tế:
 Đại học Kinh tế Quốc dân
 Đại học Kinh tế TP. Hồ Chí Minh
 Học viện Tài chính
@@ -15,8 +12,6 @@ Học viện Ngân hàng
 Đại học Mở TP. HCM
 Đại học Kinh tế - Đại học Đà Nẵng
 Đại học Kinh tế - Luật TP. HCM
-
-KHXH:
 Đại học Luật Hà Nội
 Học viện Báo chí và Tuyên truyền
 Đại học Văn hóa Hà Nội
@@ -26,8 +21,6 @@ Học viện Ngoại giao
 Đại học Nguyễn Tất Thành
 Đại học Thăng Long
 Đại học Ngoại ngữ - Đại học Đà Nẵng
-
-Kỹ thuật:
 Đại học Bách Khoa Hà Nội
 Đại học Bách Khoa TP. Hồ Chí Minh
 Đại học Sư phạm Kỹ thuật TP. HCM
