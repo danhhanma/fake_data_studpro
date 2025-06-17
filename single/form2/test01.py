@@ -44,7 +44,7 @@ def chon_khong_thich():
 # ==== Gửi request đơn ====
 def send_request(i):
     payload = {
-        "entry.1524771023": str(random.randint(4, 5)),
+        "entry.1524771023": str(random.randint(4, 5)),  # đánh giá sao
         "entry.1594930872": random.choice(momuon_list),
         "entry.366340186": chon_thich_options(),
         "entry.1122798691": chon_khong_thich()
@@ -81,7 +81,7 @@ def worker(start_idx, count):
     for i in range(start_idx, start_idx + count):
         send_request(i)
 
-# ==== Người dùng nhập ====
+# ==== Nhập số lượng request & luồng ====
 total_requests = int(input("Nhập tổng số lần gửi: "))
 num_threads = int(input("Nhập số luồng: "))
 
@@ -95,7 +95,7 @@ for i in range(num_threads):
     threads.append(t)
     t.start()
 
-# Phần dư nếu không chia hết
+# Gửi phần dư (nếu không chia hết)
 for i in range(total_requests % num_threads):
     send_request(num_threads * requests_per_thread + i)
 
