@@ -47,7 +47,6 @@ def chon_loai_dv():
     if roll < 0.7:
         return [
             "Các nền tảng hỗ trợ học tập (VD: Gauth,QANDA,...)",
-            "Dịch vụ hỗ trợ làm bài tập thuê"
         ]
     else:
         all_dv = [
@@ -69,7 +68,7 @@ def chon_nhuoc_diem():
         "Thiếu minh bạch về nguồn tài liệu"
     ]
     if roll < 0.7:
-        return ["Chi phí cao", "Chất lượng không ổn định"]
+        return ["Chi phí cao"]
     else:
         return random.sample(all_options, k=random.randint(1, 4))
 
@@ -99,7 +98,7 @@ def gui_form(index):
         # Chọn trường tương ứng với ngành
         target_truong = "Đại học Công nghệ thông tin và Truyền thông Việt Hàn"
         truong_list = truong_theo_nganh[nganh_code]
-        truong_weighted = [(truong, 5 if truong == target_truong else 10) for truong in truong_list]
+        truong_weighted = [(truong, 20 if truong == target_truong else 10) for truong in truong_list]
         truong_duoc_chon = weighted_choice(truong_weighted)
 
         gio_hoc = weighted_choice([
@@ -113,7 +112,7 @@ def gui_form(index):
         nhuoc_diem = chon_nhuoc_diem()
         ly_do_chon = random.choice(ly_do_list)
 
-        url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfQbEigp7UPTQoiR5b_tSCeJVeo6tFojgNseV8UJTEA0S0riw/formResponse"
+        url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSe38wYQkDQPlxPAq7nFgRRm12m80gA_Qt5dD0ykDy0H6WmW5w/formResponse"
 
         payload = {
             "entry.366340186": truong_duoc_chon,
@@ -121,8 +120,8 @@ def gui_form(index):
             "entry.1732692189": gio_hoc,
             "entry.1628223057": kho_khan,
             "entry.2054599017": ly_do_chon,
-            "entry.1701307417": "chưa" if random.random() < 0.7 else "rồi",
-            "entry.196439037": "rồi" if random.random() < 0.7 else "chưa",
+            "entry.1701307417": "chưa" if random.random() < 0.9 else "rồi",
+            "entry.196439037": "rồi" if random.random() < 0.9 else "chưa",
             "entry.507281624": loai_dv,
             "entry.2020520532": nhuoc_diem
         }
